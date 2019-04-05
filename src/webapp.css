@@ -1,0 +1,8 @@
+.parking-widget {
+    display: inline-block;
+}
+
+.shopping-cart {
+    display: inline-block;
+    float: right;
+}

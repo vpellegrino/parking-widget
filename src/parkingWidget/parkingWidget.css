@@ -1,0 +1,129 @@
+/* medium-big screen */
+@media only screen and (min-width: 600px) {
+    .collapsible-content .vendor-details .feature-section {
+        float: right;
+    }
+
+    .collapsible-content .vendor-details .feature-section .features-title {
+        text-align: right;
+    }
+
+    .toggle-area {
+        display: block;
+    }
+
+    .toggle:checked + .toggle-area + .collapsible-content {
+        max-height: 500px;
+    }
+
+    #parking-slot-area parking-slot {
+        display: inline-block;
+    }
+
+    #show-hide-title {
+        float: right;
+    }
+}
+
+/* small screen */
+@media only screen and (max-width: 600px) {
+    #vendor-area, #parking-slot-area {
+        font-size: 13px;
+    }
+
+    .collapsible-content .vendor-details .feature-section .feature-list {
+        padding: 0;
+    }
+
+    .toggle-area {
+        display: inline-block;
+    }
+
+    #show-hide-title {
+        display: inline-block;
+    }
+
+    #parking-slot-area parking-slot {
+        display: block;
+        width: 150px;
+    }
+}
+
+/* collapsible section */
+#collapsible {
+    display: none;
+}
+
+.toggle:checked + .toggle-area + .collapsible-content {
+    max-height: 1500px;
+}
+
+.toggle:checked + .toggle-area {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.toggle-area {
+    padding: 1rem;
+    background: gainsboro;
+    border-radius: 7px;
+    border-color: lightsteelblue;
+    transition: all 0.25s ease-out;
+}
+
+.collapsible-content {
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height .25s ease-in-out;
+}
+
+.collapsible-content .vendor-details {
+    padding: .5rem 1rem;
+}
+
+.collapsible-content .vendor-details .vendor-map {
+    image-rendering: pixelated;
+    height: 390px;
+    width: 370px;
+}
+
+.collapsible-content .vendor-details .feature-section .feature-list {
+    list-style: none;
+}
+
+.collapsible-content .vendor-details .feature-section .feature-list li:before {
+    content: '✓ ';
+    color: green;
+    font-weight: bold;
+}
+
+#show-hide-title {
+    cursor: pointer;
+    font-weight: bold;
+    font-family: monospace;
+    color: red;
+}
+
+#show-hide-title:hover {
+    color: darkgoldenrod;
+}
+
+/* parking slot area */
+#parking-slot-area parking-slot {
+    margin: 15px;
+}
+
+#parking-slot-area parking-slot ul {
+    cursor: pointer;
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+
+#parking-slot-area parking-slot:nth-child(even) {
+    background: darkgoldenrod
+}
+
+#parking-slot-area parking-slot:nth-child(odd) {
+    background: gainsboro
+}
